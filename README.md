@@ -12,6 +12,7 @@ Open the server folder, and enter *world/datapacks*, then, copy the downloaded z
 
 ## Features
 When dispensing the following items, they will be placed, if on the correct block (See table below).
+The blocks and items in the "Activate Blocks" section must be used by dropping the item through the block, placing the dispenser facing to it.
 
 Works in vertical also, when letting fall an item on his correct block.
 
@@ -22,7 +23,14 @@ Works in vertical also, when letting fall an item on his correct block.
 | Dirt, Grass  | All the saplings and sweet berries |
 | Farmland     | All the crops                      |
 
+## Activate blocks
+| Block    | Items allowed to use   |
+| ---------|:---------------------- |
+| Jukebox  | Allo the discs         |
+
 ## Changelog
+#### Version 4:
+- Added jukebox use capabilities.
 #### Version 3:
 - Added sapling placing on grass.
 - Added support for 18w49a new Sweet Berries.
