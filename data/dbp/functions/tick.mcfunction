@@ -19,6 +19,20 @@ execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:pumpkin_seeds"}}] at @
 execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:potato"}}] at @s unless entity @p[scores={plant_mine_o_se=1..}] run tag @s add plant_potato
 execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:carrot"}}] at @s unless entity @p[scores={plant_mine_c_se=1..}] run tag @s add plant_carrot
 
+# Set tag to discs
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_13"}}] at @s run tag @s add set_disc_13
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_cat"}}] at @s run tag @s add set_disc_cat
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_blocks"}}] at @s run tag @s add set_disc_blocks
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_chirp"}}] at @s run tag @s add set_disc_chirp
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_far"}}] at @s run tag @s add set_disc_far
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_mall"}}] at @s run tag @s add set_disc_mall
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_mellohi"}}] at @s run tag @s add set_disc_mellohi
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_stal"}}] at @s run tag @s add set_disc_stal
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_strad"}}] at @s run tag @s add set_disc_strad
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_ward"}}] at @s run tag @s add set_disc_ward
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_11"}}] at @s run tag @s add set_disc_11
+execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_wait"}}] at @s run tag @s add set_disc_wait
+
 # Set tag to sweet berry
 execute as @e[tag=dirt_plantable,nbt={Item:{id:"minecraft:sweet_berries"}}] at @s unless entity @p[scores={plant_mine_b_bu=1..}] run tag @s add plant_sb
 
@@ -45,6 +59,20 @@ execute as @e[type=item,tag=plant_pumpkin] run execute at @s run setblock ~ ~ ~ 
 execute as @e[type=item,tag=plant_potato] run execute at @s run setblock ~ ~ ~ minecraft:potatoes
 execute as @e[type=item,tag=plant_carrot] run execute at @s run setblock ~ ~ ~ minecraft:carrots
 
+# Place discs
+execute as @e[type=item,tag=set_disc_13] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_13",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_cat] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_cat",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_blocks] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_blocks",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_chirp] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_chirp",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_far] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_far",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_mall] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_mall",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_mellohi] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_mellohi",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_stal] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_stal",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_strad] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_strad",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_ward] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_ward",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_11] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_11",Count:1b}} replace
+execute as @e[type=item,tag=set_disc_wait] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_wait",Count:1b}} replace
+
 # Kill placed blocks item
 execute as @e[type=item,tag=plant_nw] run kill @s
 execute as @e[type=item,tag=plant_os] run kill @s
@@ -60,6 +88,19 @@ execute as @e[type=item,tag=plant_pumpkin] run kill @s
 execute as @e[type=item,tag=plant_potato] run kill @s
 execute as @e[type=item,tag=plant_carrot] run kill @s
 execute as @e[type=item,tag=plant_sb] run kill @s
+
+execute as @e[type=item,tag=set_disc_13] run kill @s
+execute as @e[type=item,tag=set_disc_cat] run kill @s
+execute as @e[type=item,tag=set_disc_blocks] run kill @s
+execute as @e[type=item,tag=set_disc_chirp] run kill @s
+execute as @e[type=item,tag=set_disc_far] run kill @s
+execute as @e[type=item,tag=set_disc_mall] run kill @s
+execute as @e[type=item,tag=set_disc_mellohi] run kill @s
+execute as @e[type=item,tag=set_disc_stal] run kill @s
+execute as @e[type=item,tag=set_disc_strad] run kill @s
+execute as @e[type=item,tag=set_disc_ward] run kill @s
+execute as @e[type=item,tag=set_disc_11] run kill @s
+execute as @e[type=item,tag=set_disc_wait] run kill @s
 
 scoreboard players set @a plant_mine_nw 0 
 scoreboard players set @a plant_mine_o_sa 0 
