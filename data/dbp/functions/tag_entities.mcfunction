@@ -10,8 +10,11 @@ execute as @e[type=item] at @s if block ~ ~ ~ minecraft:jukebox run tag @s add i
 
 execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~ minecraft:soul_sand run tag @s add soul_sand_plantable
 execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~ minecraft:dirt run tag @s add dirt_plantable
-execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~ minecraft:grass run tag @s add dirt_plantable
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~ ~ minecraft:grass run tag @s add dirt_plantable
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~ minecraft:grass_block run tag @s add dirt_plantable
 execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~ minecraft:farmland run tag @s add farm_plantable
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~ minecraft:podzol run tag @s add dirt_plantable
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~ minecraft:coarse_dirt run tag @s add dirt_plantable
 
 # Set sapling tag to all the sapling items
 execute as @e[type=item,nbt={Item:{id:"minecraft:oak_sapling"}}] run tag @s add sapling
