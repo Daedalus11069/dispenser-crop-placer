@@ -138,6 +138,8 @@ execute as @e[type=item,tag=plant_pumpkin] run kill @s
 execute as @e[type=item,tag=plant_potato] run kill @s
 execute as @e[type=item,tag=plant_carrot] run kill @s
 execute as @e[type=item,tag=plant_sb] run kill @s
+execute as @e[type=item,tag=plant_bm] run kill @s
+execute as @e[type=item,tag=plant_rm] run kill @s
 
 execute as @e[type=item,tag=set_disc_13] run kill @s
 execute as @e[type=item,tag=set_disc_cat] run kill @s
@@ -166,5 +168,7 @@ scoreboard players set @a plant_mine_p_se 0
 scoreboard players set @a plant_mine_o_se 0 
 scoreboard players set @a plant_mine_c_se 0 
 scoreboard players set @a plant_mine_b_bu 0 
+scoreboard players set @a plant_mine_b_bm 0 
+scoreboard players set @a plant_mine_b_rm 0 
 
 scoreboard players enable @a config
