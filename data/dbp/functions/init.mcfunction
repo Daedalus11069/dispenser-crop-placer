@@ -18,9 +18,15 @@ scoreboard objectives add plant_mine_o_se minecraft.mined:minecraft.potatoes
 
 scoreboard objectives add plant_mine_b_bu minecraft.mined:minecraft.sweet_berry_bush
 
+scoreboard objectives add plant_mine_b_mu minecraft.mined:minecraft.brown_mushroom
+scoreboard objectives add plant_mine_r_mu minecraft.mined:minecraft.red_mushroom
+
 scoreboard objectives add disable_ss dummy
 scoreboard objectives add disable_dirt dummy
 scoreboard objectives add disable_farm dummy
 scoreboard objectives add disable_jukebox dummy
+scoreboard objectives add disable_mush dummy
 
 scoreboard objectives add config trigger
+
+advancement grant @a from datapacks:root

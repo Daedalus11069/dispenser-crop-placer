@@ -11,6 +11,10 @@ execute as @e[tag=dirt_plantable,nbt={Item:{id:"minecraft:jungle_sapling"}}] at 
 execute as @e[tag=dirt_plantable,nbt={Item:{id:"minecraft:acacia_sapling"}}] at @s unless entity @p[scores={plant_mine_a_sa=1..}] run tag @s add plant_as
 execute as @e[tag=dirt_plantable,nbt={Item:{id:"minecraft:dark_oak_sapling"}}] at @s unless entity @p[scores={plant_mine_d_sa=1..}] run tag @s add plant_ds
 
+# Set tag to mushrooms
+execute as @e[tag=mush_plantable,nbt={Item:{id:"minecraft:brown_mushroom"}}] at @s unless entity @p[scores={plant_mine_b_mu=1..}] run tag @s add plant_bm
+execute as @e[tag=mush_plantable,nbt={Item:{id:"minecraft:red_mushroom"}}] at @s unless entity @p[scores={plant_mine_r_mu=1..}] run tag @s add plant_rm
+
 # Set tag to seeds
 execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:wheat_seeds"}}] at @s unless entity @p[scores={plant_mine_w_se=1..}] run tag @s add plant_wheat
 execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:beetroot_seeds"}}] at @s unless entity @p[scores={plant_mine_b_se=1..}] run tag @s add plant_beetroot
@@ -47,6 +51,10 @@ execute as @e[type=item,tag=plant_bs] run execute at @s run setblock ~ ~ ~ minec
 execute as @e[type=item,tag=plant_js] run execute at @s run setblock ~ ~ ~ minecraft:jungle_sapling
 execute as @e[type=item,tag=plant_as] run execute at @s run setblock ~ ~ ~ minecraft:acacia_sapling
 execute as @e[type=item,tag=plant_ds] run execute at @s run setblock ~ ~ ~ minecraft:dark_oak_sapling
+
+# Place mushrooms
+execute as @e[type=item,tag=plant_bm] run execute at @s run setblock ~ ~ ~ minecraft:brown_mushroom
+execute as @e[type=item,tag=plant_rm] run execute at @s run setblock ~ ~ ~ minecraft:red_mushroom
 
 # Place sweet berry bush
 execute as @e[type=item,tag=plant_sb] run execute at @s run setblock ~ ~ ~ minecraft:sweet_berry_bush
@@ -112,8 +120,8 @@ execute as @e[type=item,tag=set_disc_wait] run execute at @s run setblock ~ ~ ~ 
 
 
 # Show config
-execute as @p[scores={config:1..}] at @s run tellraw @p ["",{"text":"[Dispenser Crop Placer]\n","color":"green","bold":true},{"text":"Place On:\n","color":"blue","bold":false},{"text":"  Soul Sand: ","color":"aqua"},{"text":"     [Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/soul_sand"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to Enable"}]}}},{"text":"[Disable]\n","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/soul_sand"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to Disable"}]}}},{"text":"  Dirt and Grass: ","color":"aqua"},{"text":"[Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/dirt"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to enable"}]}}},{"text":"[Disable]\n","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/dirt"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to disable"}]}}},{"text":"  Farmland:","color":"aqua"},{"text":"       [Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/farmland"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to enable"}]}}},{"text":"[Disable]\n","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/farmland"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to disable"}]}}},{"text":"Activate:\n","color":"blue"},{"text":"  Jukebox:","color":"aqua"},{"text":"        [Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/jukebox"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to enable"}]}}},{"text":"[Disable]","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/jukebox"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to disable"}]}}}]
-
+execute as @p[scores={config=1..}] at @s run tellraw @s ["",{"text":"Configure ","color":"green"},{"text":"Dispenser Crop Placer","color":"green","underlined":true,"clickEvent":{"action":"run_command","value":"/function dbp:configure"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to Configure"}]}}}]
+scoreboard players set @a config 0
 
 # Kill placed blocks item
 execute as @e[type=item,tag=plant_nw] run kill @s
@@ -159,4 +167,4 @@ scoreboard players set @a plant_mine_o_se 0
 scoreboard players set @a plant_mine_c_se 0 
 scoreboard players set @a plant_mine_b_bu 0 
 
-scoreboard players enable config @a
+scoreboard players enable @a config
