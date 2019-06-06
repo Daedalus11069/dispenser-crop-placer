@@ -110,6 +110,11 @@ execute as @e[type=item,tag=set_disc_ward] run execute at @s run setblock ~ ~ ~ 
 execute as @e[type=item,tag=set_disc_11] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_11",Count:1b}} replace
 execute as @e[type=item,tag=set_disc_wait] run execute at @s run setblock ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_wait",Count:1b}} replace
 
+
+# Show config
+execute as @p[scores={config:1..}] at @s run tellraw @p ["",{"text":"[Dispenser Crop Placer]\n","color":"green","bold":true},{"text":"Place On:\n","color":"blue","bold":false},{"text":"  Soul Sand: ","color":"aqua"},{"text":"     [Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/soul_sand"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to Enable"}]}}},{"text":"[Disable]\n","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/soul_sand"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to Disable"}]}}},{"text":"  Dirt and Grass: ","color":"aqua"},{"text":"[Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/dirt"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to enable"}]}}},{"text":"[Disable]\n","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/dirt"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to disable"}]}}},{"text":"  Farmland:","color":"aqua"},{"text":"       [Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/farmland"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to enable"}]}}},{"text":"[Disable]\n","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/farmland"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to disable"}]}}},{"text":"Activate:\n","color":"blue"},{"text":"  Jukebox:","color":"aqua"},{"text":"        [Enable] ","color":"green","clickEvent":{"action":"run_command","value":"function dbp:enable/jukebox"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to enable"}]}}},{"text":"[Disable]","color":"red","clickEvent":{"action":"run_command","value":"function dbp:disable/jukebox"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to disable"}]}}}]
+
+
 # Kill placed blocks item
 execute as @e[type=item,tag=plant_nw] run kill @s
 execute as @e[type=item,tag=plant_os] run kill @s
@@ -153,3 +158,5 @@ scoreboard players set @a plant_mine_p_se 0
 scoreboard players set @a plant_mine_o_se 0 
 scoreboard players set @a plant_mine_c_se 0 
 scoreboard players set @a plant_mine_b_bu 0 
+
+scoreboard players enable config @a
