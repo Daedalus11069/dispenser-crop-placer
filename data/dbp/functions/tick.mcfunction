@@ -40,6 +40,11 @@ execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_wait"}}] at @s 
 # Set tag to sweet berry
 execute as @e[tag=dirt_plantable,nbt={Item:{id:"minecraft:sweet_berries"}}] at @s unless entity @p[scores={plant_mine_b_bu=1..}] run tag @s add plant_sb
 
+# Set tag to buckets
+execute as @e[tag=in_cauldron,tag=big_bucket] at @s run tag @s add fill_cauldron
+execute as @e[tag=in_cauldron,tag=small_bucket] at @s run tag @s add step_cauldron
+
+
 
 # Place nether wart block
 execute as @e[type=item,tag=plant_nw] run execute at @s run setblock ~ ~ ~ minecraft:nether_wart
@@ -67,6 +72,20 @@ execute as @e[type=item,tag=plant_pumpkin] run execute at @s run setblock ~ ~ ~ 
 execute as @e[type=item,tag=plant_potato] run execute at @s run setblock ~ ~ ~ minecraft:potatoes
 execute as @e[type=item,tag=plant_carrot] run execute at @s run setblock ~ ~ ~ minecraft:carrots
 
+# Fill cauldron
+execute as @e[type=item,tag=fill_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=3] run execute as @e[tag=dbp_marker] at @s run function dbp:logic/add_filled_bucket
+execute as @e[type=item,tag=fill_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=2] run setblock ~ ~ ~ minecraft:cauldron[level=3]
+execute as @e[type=item,tag=fill_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=1] run setblock ~ ~ ~ minecraft:cauldron[level=3]
+execute as @e[type=item,tag=fill_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=0] run setblock ~ ~ ~ minecraft:cauldron[level=3]
+# Step cauldron
+execute as @e[type=item,tag=step_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=3] run execute as @e[tag=dbp_marker] at @s run function dbp:logic/add_filled_bottle
+execute as @e[type=item,tag=step_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=2] run setblock ~ ~ ~ minecraft:cauldron[level=3]
+execute as @e[type=item,tag=step_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=1] run setblock ~ ~ ~ minecraft:cauldron[level=2]
+execute as @e[type=item,tag=step_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=0] run setblock ~ ~ ~ minecraft:cauldron[level=1]
+
+# Re-add empty buckets
+execute as @e[type=item,tag=fill_cauldron] at @s run execute as @e[tag=dbp_marker] at @s run function dbp:logic/add_empty_bucket
+execute as @e[type=item,tag=step_cauldron] at @s run execute as @e[tag=dbp_marker] at @s run function dbp:logic/add_empty_bottle
 
 # Stop all records within range
 execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true] run stopsound @a[distance=..64] record
@@ -153,6 +172,12 @@ execute as @e[type=item,tag=set_disc_strad] run kill @s
 execute as @e[type=item,tag=set_disc_ward] run kill @s
 execute as @e[type=item,tag=set_disc_11] run kill @s
 execute as @e[type=item,tag=set_disc_wait] run kill @s
+
+execute as @e[type=item,tag=fill_cauldron] run kill @s
+execute as @e[type=item,tag=step_cauldron] run kill @s
+
+# Kill marker
+kill @e[tag=dbp_marker]
 
 scoreboard players set @a plant_mine_nw 0 
 scoreboard players set @a plant_mine_o_sa 0 
