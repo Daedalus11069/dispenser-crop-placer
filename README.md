@@ -26,11 +26,14 @@ Works in vertical also, when letting fall an item on his correct block.
 | Farmland     | All the crops                      |
 
 ## Activate blocks
-| Block    | Items allowed to use  |
-| ---------|:--------------------- |
-| Jukebox  | All the discs         |
+| Block    | Items allowed to use      |
+| ---------|:------------------------- |
+| Jukebox  | All the discs             |
+| Cauldron | Water buckets and bottles |
 
 ## Changelog
+#### Version 5:
+- Added cauldron use capabilities with water buckets and water bottles.
 #### Version 4:
 - Added jukebox use capabilities.
 #### Version 3:
