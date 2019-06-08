@@ -16,7 +16,7 @@ execute as @e[type=item] at @s if block ~1 ~ ~ minecraft:dispenser[triggered=tru
 
 execute as @e[type=item] at @s if block ~ ~ ~ minecraft:air run tag @s add in_air
 execute as @e[type=item,tag=dbp_dispensered] at @s unless entity @p[scores={disable_jukebox=1..}] if block ~ ~ ~ minecraft:jukebox run tag @s add in_jukebox
-execute as @e[type=item,tag=dbp_dispensered] at @s unless entity @p[scores={disable_cauldron=1..}] if block ~ ~ ~ minecraft:cauldron run tag @s add in_cauldron
+execute as @e[type=item,tag=dbp_dispensered] at @s unless entity @p[scores={disable_cauldr=1..}] if block ~ ~ ~ minecraft:cauldron run tag @s add in_cauldron
 
 execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s unless entity @p[scores={disable_ss=1..}] if block ~ ~-1 ~ minecraft:soul_sand run tag @s add soul_sand_plantable
 execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s unless entity @p[scores={disable_dirt=1..}] if block ~ ~-1 ~ minecraft:dirt run tag @s add dirt_plantable

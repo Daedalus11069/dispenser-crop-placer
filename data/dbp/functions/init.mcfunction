@@ -26,6 +26,7 @@ scoreboard objectives add disable_dirt dummy
 scoreboard objectives add disable_farm dummy
 scoreboard objectives add disable_jukebox dummy
 scoreboard objectives add disable_mush dummy
+scoreboard objectives add disable_cauldr dummy
 
 scoreboard objectives add config trigger
 

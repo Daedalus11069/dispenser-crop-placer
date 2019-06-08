@@ -31,9 +31,14 @@ Works in vertical also, when letting fall an item on his correct block.
 | Jukebox  | All the discs             |
 | Cauldron | Water buckets and bottles |
 
+## Settings
+
 ## Changelog
-#### Version 5:
+#### Version 6:
 - Added cauldron use capabilities with water buckets and water bottles.
+#### Version 5:
+- Added Mushrooms support.
+- Added settings panel.
 #### Version 4:
 - Added jukebox use capabilities.
 #### Version 3:
