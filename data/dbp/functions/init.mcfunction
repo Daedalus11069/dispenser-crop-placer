@@ -35,3 +35,4 @@ scoreboard objectives add disable_falls dummy
 scoreboard objectives add config trigger
 
 advancement grant @a from datapacks:root
+tag @a add dbp_installed
