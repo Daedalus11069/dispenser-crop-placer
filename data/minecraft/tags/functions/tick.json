@@ -1,5 +1,6 @@
 {
   "values":[
-	"dbp:tick"
+  "dbp:tick",
+  "datapacks:tool"
   ]
 }

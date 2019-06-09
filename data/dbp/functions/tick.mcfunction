@@ -23,6 +23,14 @@ execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:pumpkin_seeds"}}] at @
 execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:potato"}}] at @s unless entity @p[scores={plant_mine_o_se=1..}] run tag @s add plant_potato
 execute as @e[tag=farm_plantable,nbt={Item:{id:"minecraft:carrot"}}] at @s unless entity @p[scores={plant_mine_c_se=1..}] run tag @s add plant_carrot
 
+# Set tag to beans
+execute as @e[tag=jungled,nbt={Item:{id:"minecraft:cocoa_beans"}}] at @s unless entity @p[scores={plant_mine_cc_b=1..}] run tag @s add plant_cocoa
+
+# Set tag to sands and gravel
+execute as @e[tag=block_placeable,nbt={Item:{id:"minecraft:sand"}}] at @s run tag @s add place_sand
+execute as @e[tag=block_placeable,nbt={Item:{id:"minecraft:red_sand"}}] at @s run tag @s add place_red_sand
+execute as @e[tag=block_placeable,nbt={Item:{id:"minecraft:gravel"}}] at @s run tag @s add place_gravel
+
 # Set tag to discs
 execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_13"}}] at @s run tag @s add set_disc_13
 execute as @e[tag=in_jukebox,nbt={Item:{id:"minecraft:music_disc_cat"}}] at @s run tag @s add set_disc_cat
@@ -61,6 +69,12 @@ execute as @e[type=item,tag=plant_ds] run execute at @s run setblock ~ ~ ~ minec
 execute as @e[type=item,tag=plant_bm] run execute at @s run setblock ~ ~ ~ minecraft:brown_mushroom
 execute as @e[type=item,tag=plant_rm] run execute at @s run setblock ~ ~ ~ minecraft:red_mushroom
 
+# Place cocoa
+execute as @e[type=item,tag=plant_cocoa] at @s if block ~1 ~ ~ #minecraft:jungle_logs run execute at @s run setblock ~ ~ ~ minecraft:cocoa[facing=east]
+execute as @e[type=item,tag=plant_cocoa] at @s if block ~-1 ~ ~ #minecraft:jungle_logs run execute at @s run setblock ~ ~ ~ minecraft:cocoa[facing=west]
+execute as @e[type=item,tag=plant_cocoa] at @s if block ~ ~ ~1 #minecraft:jungle_logs run execute at @s run setblock ~ ~ ~ minecraft:cocoa[facing=south]
+execute as @e[type=item,tag=plant_cocoa] at @s if block ~ ~ ~-1 #minecraft:jungle_logs run execute at @s run setblock ~ ~ ~ minecraft:cocoa[facing=north]
+
 # Place sweet berry bush
 execute as @e[type=item,tag=plant_sb] run execute at @s run setblock ~ ~ ~ minecraft:sweet_berry_bush
 
@@ -71,6 +85,11 @@ execute as @e[type=item,tag=plant_melon] run execute at @s run setblock ~ ~ ~ mi
 execute as @e[type=item,tag=plant_pumpkin] run execute at @s run setblock ~ ~ ~ minecraft:pumpkin_stem
 execute as @e[type=item,tag=plant_potato] run execute at @s run setblock ~ ~ ~ minecraft:potatoes
 execute as @e[type=item,tag=plant_carrot] run execute at @s run setblock ~ ~ ~ minecraft:carrots
+
+# Place Sands and gravel
+execute as @e[type=item,tag=place_sand] run execute at @s run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:sand"},Time:1}
+execute as @e[type=item,tag=place_red_sand] run execute at @s run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:red_sand"},Time:1}
+execute as @e[type=item,tag=place_gravel] run execute at @s run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:gravel"},Time:1}
 
 # Fill cauldron
 execute as @e[type=item,tag=fill_cauldron] run execute at @s if block ~ ~ ~ minecraft:cauldron[level=3] run execute as @e[tag=dbp_marker] at @s run function dbp:logic/add_filled_bucket
@@ -159,6 +178,7 @@ execute as @e[type=item,tag=plant_carrot] run kill @s
 execute as @e[type=item,tag=plant_sb] run kill @s
 execute as @e[type=item,tag=plant_bm] run kill @s
 execute as @e[type=item,tag=plant_rm] run kill @s
+execute as @e[type=item,tag=plant_cocoa] run kill @s
 
 execute as @e[type=item,tag=set_disc_13] run kill @s
 execute as @e[type=item,tag=set_disc_cat] run kill @s
@@ -175,6 +195,10 @@ execute as @e[type=item,tag=set_disc_wait] run kill @s
 
 execute as @e[type=item,tag=fill_cauldron] run kill @s
 execute as @e[type=item,tag=step_cauldron] run kill @s
+
+execute as @e[type=item,tag=place_sand] run kill @s
+execute as @e[type=item,tag=place_red_sand] run kill @s
+execute as @e[type=item,tag=place_gravel] run kill @s
 
 # Kill marker
 kill @e[tag=dbp_marker]
@@ -195,5 +219,6 @@ scoreboard players set @a plant_mine_c_se 0
 scoreboard players set @a plant_mine_b_bu 0 
 scoreboard players set @a plant_mine_b_bm 0 
 scoreboard players set @a plant_mine_b_rm 0 
+scoreboard players set @a plant_mine_cc_b 0 
 
 scoreboard players enable @a config

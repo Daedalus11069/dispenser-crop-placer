@@ -21,12 +21,16 @@ scoreboard objectives add plant_mine_b_bu minecraft.mined:minecraft.sweet_berry_
 scoreboard objectives add plant_mine_b_mu minecraft.mined:minecraft.brown_mushroom
 scoreboard objectives add plant_mine_r_mu minecraft.mined:minecraft.red_mushroom
 
+scoreboard objectives add plant_mine_cc_b minecraft.mined:minecraft.cocoa
+
 scoreboard objectives add disable_ss dummy
 scoreboard objectives add disable_dirt dummy
+scoreboard objectives add disable_cocoa dummy
 scoreboard objectives add disable_farm dummy
 scoreboard objectives add disable_jukebox dummy
 scoreboard objectives add disable_mush dummy
 scoreboard objectives add disable_cauldr dummy
+scoreboard objectives add disable_falls dummy
 
 scoreboard objectives add config trigger
 

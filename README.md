@@ -24,6 +24,13 @@ Works in vertical also, when letting fall an item on his correct block.
 | Soul Sand    | Nether Wart                        |
 | Dirt, Grass  | All the saplings and sweet berries |
 | Farmland     | All the crops                      |
+| Jungle Wood  | Cocoa beans                        |
+
+## Place blocks
+| Items able to be placed            |
+|:---------------------------------- |
+| Red and normal Sand                |
+| Gravel                             |
 
 ## Activate blocks
 | Block    | Items allowed to use      |
@@ -32,8 +39,13 @@ Works in vertical also, when letting fall an item on his correct block.
 | Cauldron | Water buckets and bottles |
 
 ## Settings
+You can get the datapack configure tool with: `/function datapacks:give_tool`. When right clicking with it in your hand an UI will open.
 
 ## Changelog
+#### Version 7 (dev):
+- Added cocoa beans support.
+- Added Red sand, normal sand and gravel support.
+- Added settings GUI.
 #### Version 6:
 - Added cauldron use capabilities with water buckets and water bottles.
 #### Version 5:
