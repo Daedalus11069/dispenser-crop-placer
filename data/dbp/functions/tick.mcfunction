@@ -52,6 +52,9 @@ execute as @e[tag=dirt_plantable,nbt={Item:{id:"minecraft:sweet_berries"}}] at @
 execute as @e[tag=in_cauldron,tag=big_bucket] at @s run tag @s add fill_cauldron
 execute as @e[tag=in_cauldron,tag=small_bucket] at @s run tag @s add step_cauldron
 
+# Set tag to sugar canes
+execute as @e[tag=water_surrounded,nbt={Item:{id:"minecraft:sugar_cane"}}] at @s run tag @s add plant_sugarcane
+
 
 
 # Place nether wart block
@@ -85,6 +88,9 @@ execute as @e[type=item,tag=plant_melon] run execute at @s run setblock ~ ~ ~ mi
 execute as @e[type=item,tag=plant_pumpkin] run execute at @s run setblock ~ ~ ~ minecraft:pumpkin_stem
 execute as @e[type=item,tag=plant_potato] run execute at @s run setblock ~ ~ ~ minecraft:potatoes
 execute as @e[type=item,tag=plant_carrot] run execute at @s run setblock ~ ~ ~ minecraft:carrots
+
+# Place canes
+execute as @e[type=item,tag=plant_sugarcane] run execute at @s run setblock ~ ~ ~ minecraft:sugar_cane
 
 # Place Sands and gravel
 execute as @e[type=item,tag=place_sand] run execute at @s run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:sand"},Time:1}
@@ -179,6 +185,7 @@ execute as @e[type=item,tag=plant_sb] run kill @s
 execute as @e[type=item,tag=plant_bm] run kill @s
 execute as @e[type=item,tag=plant_rm] run kill @s
 execute as @e[type=item,tag=plant_cocoa] run kill @s
+execute as @e[type=item,tag=plant_sugarcane] run kill @s
 
 execute as @e[type=item,tag=set_disc_13] run kill @s
 execute as @e[type=item,tag=set_disc_cat] run kill @s

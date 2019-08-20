@@ -35,6 +35,11 @@ execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s unless entity @p[s
 execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s unless entity @p[scores={disable_mush=1..}] if block ~ ~-1 ~ minecraft:podzol run tag @s add mush_plantable
 execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s unless entity @p[scores={disable_mush=1..}] if block ~ ~-1 ~ minecraft:mycelium run tag @s add mush_plantable
 
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~1 ~-1 ~ minecraft:water run tag @s add water_surrounded
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~-1 ~-1 ~ minecraft:water run tag @s add water_surrounded
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~1 minecraft:water run tag @s add water_surrounded
+execute as @e[type=item,tag=dbp_dispensered,tag=in_air] at @s if block ~ ~-1 ~-1 minecraft:water run tag @s add water_surrounded
+
 # Set sapling tag to all the sapling items
 execute as @e[type=item,tag=dbp_dispensered,nbt={Item:{id:"minecraft:oak_sapling"}}] run tag @s add sapling
 execute as @e[type=item,tag=dbp_dispensered,nbt={Item:{id:"minecraft:spruce_sapling"}}] run tag @s add sapling
