@@ -125,7 +125,7 @@ execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[h
 execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_mall",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_mall",Count:1b},Motion:[0.0,0.2,0.0]}
 execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_mellohi",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_mellohi",Count:1b},Motion:[0.0,0.2,0.0]}
 execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_stal",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_stal",Count:1b},Motion:[0.0,0.2,0.0]}
-execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_stard",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_stard",Count:1b},Motion:[0.0,0.2,0.0]}
+execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_strad",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_strad",Count:1b},Motion:[0.0,0.2,0.0]}
 execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_ward",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_ward",Count:1b},Motion:[0.0,0.2,0.0]}
 execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_11",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_11",Count:1b},Motion:[0.0,0.2,0.0]}
 execute as @e[type=item,tag=in_jukebox] at @s if block ~ ~ ~ minecraft:jukebox[has_record=true]{RecordItem:{id:"minecraft:music_disc_wait",Count:1b}} run execute at @s run summon item ~ ~1 ~ {Item:{id:"minecraft:music_disc_wait",Count:1b},Motion:[0.0,0.2,0.0]}
@@ -139,7 +139,7 @@ execute as @e[type=item,tag=set_disc_far] run execute at @s run playsound minecr
 execute as @e[type=item,tag=set_disc_mall] run execute at @s run playsound minecraft:music_disc.mall record @a ~ ~ ~ 4 1
 execute as @e[type=item,tag=set_disc_mellohi] run execute at @s run playsound minecraft:music_disc.mellohi record @a ~ ~ ~ 4 1
 execute as @e[type=item,tag=set_disc_stal] run execute at @s run playsound minecraft:music_disc.stal record @a ~ ~ ~ 4 1
-execute as @e[type=item,tag=set_disc_stard] run execute at @s run playsound minecraft:music_disc.stard record @a ~ ~ ~ 4 1
+execute as @e[type=item,tag=set_disc_strad] run execute at @s run playsound minecraft:music_disc.strad record @a ~ ~ ~ 4 1
 execute as @e[type=item,tag=set_disc_ward] run execute at @s run playsound minecraft:music_disc.ward record @a ~ ~ ~ 4 1
 execute as @e[type=item,tag=set_disc_11] run execute at @s run playsound minecraft:music_disc.11 record @a ~ ~ ~ 4 1
 execute as @e[type=item,tag=set_disc_wait] run execute at @s run playsound minecraft:music_disc.wait record @a ~ ~ ~ 4 1
