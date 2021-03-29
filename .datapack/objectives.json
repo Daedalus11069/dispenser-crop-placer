@@ -1,1 +1,97 @@
-[["datapacksPage","dummy","datapacks:tool.mcfunction"],["datapacksGUI","dummy","datapacks:gui/gui1.mcfunction"],["plant_nw","dummy","dbp:init.mcfunction"],["plant_mine_nw","minecraft.mined:minecraft.nether_wart","dbp:init.mcfunction"],["plant_mine_o_sa","minecraft.mined:minecraft.oak_sapling","dbp:init.mcfunction"],["plant_mine_s_sa","minecraft.mined:minecraft.spruce_sapling","dbp:init.mcfunction"],["plant_mine_b_sa","minecraft.mined:minecraft.birch_sapling","dbp:init.mcfunction"],["plant_mine_j_sa","minecraft.mined:minecraft.jungle_sapling","dbp:init.mcfunction"],["plant_mine_a_sa","minecraft.mined:minecraft.acacia_sapling","dbp:init.mcfunction"],["plant_mine_d_sa","minecraft.mined:minecraft.dark_oak_sapling","dbp:init.mcfunction"],["plant_mine_w_se","minecraft.mined:minecraft.wheat","dbp:init.mcfunction"],["plant_mine_b_se","minecraft.mined:minecraft.beetroots","dbp:init.mcfunction"],["plant_mine_m_se","minecraft.mined:minecraft.melon_stem","dbp:init.mcfunction"],["plant_mine_p_se","minecraft.mined:minecraft.pumpkin_stem","dbp:init.mcfunction"],["plant_mine_c_se","minecraft.mined:minecraft.carrots","dbp:init.mcfunction"],["plant_mine_o_se","minecraft.mined:minecraft.potatoes","dbp:init.mcfunction"],["plant_mine_b_bu","minecraft.mined:minecraft.sweet_berry_bush","dbp:init.mcfunction"],["plant_mine_b_mu","minecraft.mined:minecraft.brown_mushroom","dbp:init.mcfunction"],["plant_mine_r_mu","minecraft.mined:minecraft.red_mushroom","dbp:init.mcfunction"],["plant_mine_cc_b","minecraft.mined:minecraft.cocoa","dbp:init.mcfunction"],["disable_ss","dummy","dbp:init.mcfunction"],["disable_dirt","dummy","dbp:init.mcfunction"],["disable_cocoa","dummy","dbp:init.mcfunction"],["disable_farm","dummy","dbp:init.mcfunction"],["disable_jukebox","dummy","dbp:init.mcfunction"],["disable_mush","dummy","dbp:init.mcfunction"],["disable_cauldr","dummy","dbp:init.mcfunction"],["disable_falls","dummy","dbp:init.mcfunction"],["config","trigger","dbp:init.mcfunction"]]
+[
+  ["datapacksPage", "dummy", "datapacks:tool.mcfunction"],
+  ["datapacksGUI", "dummy", "datapacks:gui/gui1.mcfunction"],
+  ["plant_nw", "dummy", "dbp:init.mcfunction"],
+  [
+    "plant_mine_nw",
+    "minecraft.mined:minecraft.nether_wart",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_cf",
+    "minecraft.mined:minecraft.chorus_flower",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_o_sa",
+    "minecraft.mined:minecraft.oak_sapling",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_s_sa",
+    "minecraft.mined:minecraft.spruce_sapling",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_b_sa",
+    "minecraft.mined:minecraft.birch_sapling",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_j_sa",
+    "minecraft.mined:minecraft.jungle_sapling",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_a_sa",
+    "minecraft.mined:minecraft.acacia_sapling",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_d_sa",
+    "minecraft.mined:minecraft.dark_oak_sapling",
+    "dbp:init.mcfunction"
+  ],
+  ["plant_mine_w_se", "minecraft.mined:minecraft.wheat", "dbp:init.mcfunction"],
+  [
+    "plant_mine_b_se",
+    "minecraft.mined:minecraft.beetroots",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_m_se",
+    "minecraft.mined:minecraft.melon_stem",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_p_se",
+    "minecraft.mined:minecraft.pumpkin_stem",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_c_se",
+    "minecraft.mined:minecraft.carrots",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_o_se",
+    "minecraft.mined:minecraft.potatoes",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_b_bu",
+    "minecraft.mined:minecraft.sweet_berry_bush",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_b_mu",
+    "minecraft.mined:minecraft.brown_mushroom",
+    "dbp:init.mcfunction"
+  ],
+  [
+    "plant_mine_r_mu",
+    "minecraft.mined:minecraft.red_mushroom",
+    "dbp:init.mcfunction"
+  ],
+  ["plant_mine_cc_b", "minecraft.mined:minecraft.cocoa", "dbp:init.mcfunction"],
+  ["disable_ss", "dummy", "dbp:init.mcfunction"],
+  ["disable_es", "dummy", "dbp:init.mcfunction"],
+  ["disable_dirt", "dummy", "dbp:init.mcfunction"],
+  ["disable_cocoa", "dummy", "dbp:init.mcfunction"],
+  ["disable_farm", "dummy", "dbp:init.mcfunction"],
+  ["disable_jukebox", "dummy", "dbp:init.mcfunction"],
+  ["disable_mush", "dummy", "dbp:init.mcfunction"],
+  ["disable_cauldr", "dummy", "dbp:init.mcfunction"],
+  ["disable_falls", "dummy", "dbp:init.mcfunction"],
+  ["config", "trigger", "dbp:init.mcfunction"]
+]

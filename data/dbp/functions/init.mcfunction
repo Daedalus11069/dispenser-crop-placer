@@ -1,6 +1,8 @@
 scoreboard objectives add plant_nw dummy
+scoreboard objectives add plant_cf dummy
 
 scoreboard objectives add plant_mine_nw minecraft.mined:minecraft.nether_wart
+scoreboard objectives add plant_mine_cf minecraft.mined:minecraft.chorus_flower
 
 scoreboard objectives add plant_mine_o_sa minecraft.mined:minecraft.oak_sapling
 scoreboard objectives add plant_mine_s_sa minecraft.mined:minecraft.spruce_sapling
@@ -24,6 +26,7 @@ scoreboard objectives add plant_mine_r_mu minecraft.mined:minecraft.red_mushroom
 scoreboard objectives add plant_mine_cc_b minecraft.mined:minecraft.cocoa
 
 scoreboard objectives add disable_ss dummy
+scoreboard objectives add disable_es dummy
 scoreboard objectives add disable_dirt dummy
 scoreboard objectives add disable_cocoa dummy
 scoreboard objectives add disable_farm dummy
